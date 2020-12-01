@@ -1,0 +1,34 @@
+import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const getTheme = function(theme) {
+    return createMuiTheme({
+        palette: {
+            type: theme.paletteType,
+            background: {
+                default: theme.paletteType === 'light' ? '#000' : '#fff',
+            },
+        },
+    });
+};
+
+const theme = getTheme({
+    paletteType: 'light',
+});
+
+function WithRoots(Component) {
+    function WithRoot(props) {
+
+        return (
+            <MuiThemeProvider theme={theme}>
+                <CssBaseline />
+                <Component {...props} />
+            </MuiThemeProvider>
+        );
+    }
+
+    return WithRoot;
+}
+
+export default WithRoots;
