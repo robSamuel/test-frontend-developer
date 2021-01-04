@@ -1,0 +1,70 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "meteor": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+              "extensions": [".js", ".jsx"]
+            }
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "semi": "error",
+        "no-underscore-dangle": 0,
+        "no-use-before-define": "error",
+        "no-restricted-properties": "error",
+        "no-var": "error",
+        "no-control-regex": "error",
+        "react/prop-types": 0,
+        "react/jsx-no-duplicate-props": "error",
+        "react/destructuring-assignment": "error",
+        "react/jsx-no-comment-textnodes": "error",
+        "prefer-const": "warn",
+        "react/jsx-indent": "warn",
+        "react/no-deprecated": "warn",
+        "react/jsx-tag-spacing": "warn",
+        "react/jsx-pascal-case": "warn",
+        "react/jsx-indent-props": "warn",
+        "react/jsx-equals-spacing": "warn",
+        "react/jsx-wrap-multilines": "warn",
+        "react/jsx-curly-brace-presence": "warn",
+        "react/jsx-props-no-multi-spaces": "warn",
+        "react/no-access-state-in-setstate": "warn",
+        "react/no-danger": "off",
+        "react/jsx-no-bind": "off",
+        "react/display-name": "off",
+        "react/no-multi-comp": "off",
+        "react/no-find-dom-node": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "no-console": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
+}
